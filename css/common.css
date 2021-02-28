@@ -61,6 +61,12 @@ img {
   max-width: 100%;
 }
 /*===NAVIGATION===*/
+
+header {
+  border-bottom: 1px solid #ececec;
+  offset: -1x;
+}
+
 .page-header .list {
   align-items: center;
 }
@@ -140,6 +146,26 @@ a,
   letter-spacing: 0.02em;
 }
 
+.link.current {
+  position: relative;
+  display: block;
+}
+
+.link.current::after {
+  content: '';
+
+  position: absolute;
+  bottom: -218%;
+  left: 0;
+
+  display: block;
+  height: 5px;
+  width: 100%;
+  /* outline: 1px solid tomato; */
+  background-color: var(--alt-logo-color);
+  border-radius: 2px;
+}
+
 /* Address list */
 
 .auth-items {
@@ -213,6 +239,46 @@ a,
 .section-hero button:focus {
   background-color: var(--bcg-button-color);
   color: var(--primary-title-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: scale 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Пересмотреть */
+.modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Section Advantages */

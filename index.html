@@ -13,46 +13,55 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="page-header container" >
-            
-                <nav class="nav-links" >
-                    <a class="link-main" href="./index.html"><span class="part-web">Web</span>Studio</a>
-                    <ul class="list">
-                        <li class="item"><a class="link studio current" href="./index.html">Студия</a></li>
-                        <li class="item"><a class="link portfoli" href="./portfolio.html">Портфолио</a></li>
-                        <li class="item"><a class="link contacts" href="">Контакты</a></li>
+    <header >
+                <div class="page-header container" >
+                    <nav class="nav-links">
+                        <a class="link-main" href="./index.html"><span class="part-web">Web</span>Studio</a>
+                        <ul class="list">
+                            <li class="item"><a class="link studio current" href="./index.html">Студия</a></li>
+                            <li class="item"><a class="link portfoli" href="./portfolio.html">Портфолио</a></li>
+                            <li class="item"><a class="link contacts" href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    
+                    
+                    <ul class="address list">
+                        <li class="item">
+                            <a class="auth-items" href="mailto:info@devstudio.com">
+                                <svg class="icon" width="16" height="12">
+                                    <use href="./images/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="auth-items" href="tel:+380961111111">
+                                <svg class="icon" width="10" height="16">
+                                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
                     </ul>
-                </nav>
-           
-            
-                <ul class="address list">
-                    <li class="item">
-                        <a class="auth-items" href="mailto:info@devstudio.com"> 
-                            <svg class="icon" width="16" height="12">
-                                <use href="./images/sprite.svg#icon-envelope"></use>
-                            </svg> 
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a class="auth-items" href="tel:+380961111111">
-                            <svg class="icon" width="10" height="16">
-                            <use href="./images/sprite.svg#icon-smartphone"></use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-            
+                </div>
     </header>
 <main>
     <!-- Hero --> 
         <section class="section-hero">
             <div class="overlay">
                 <h1 class="section-title">Эффективные решения <br />для вашего бизнеса</h1>
-                <button class="button-order" type="button" >Заказать услугу</button>
+                <button class="button-order" type="button" data-modal-open>Заказать услугу</button>
             </div>
           </section>
+          <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+                <button class="close-button" data-modal-close>
+                    <svg class="icon" width="30" height="30">
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                    </svg>
+                </button>
+              </div>
+          </div>
     <!-- Advantages -->
     <section class="section-advantages">
                    <div class="container">
@@ -427,5 +436,6 @@
         </div>
     </div>
 </footer>
+<script src="./modal.js"></script>
 </body>
 </html>
