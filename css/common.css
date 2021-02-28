@@ -353,8 +353,41 @@ a,
   justify-content: space-between;
 }
 
-.section-activities {
+. .section-activities {
   padding-bottom: 94px;
+}
+
+.thumb-activities {
+  position: relative;
+}
+
+.thumb-activities::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.thumb-activities > p {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 100%;
+
+  padding-bottom: 27px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
 }
 
 .section-activities .section-title {
