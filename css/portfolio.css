@@ -214,7 +214,7 @@ img {
   list-style: none;
 }
 
-.list.buttons button {
+.list.buttons .button {
   display: inline-block;
   border-radius: 4px;
   border: none;
@@ -231,11 +231,12 @@ img {
   letter-spacing: 0.03em;
   box-shadow: none;
 
-  transition: background-color, box-shadow var(--transition-duration-cubic);
+  transition: color, box-shadow,
+    background-color var(--transition-duration-cubic);
 }
 
-.section-button button:hover,
-.section-button button:focus {
+.section-button .button:hover,
+.section-button .button:focus {
   color: var(--primary-white-color);
   background-color: var(--alt-logo-color);
   border-radius: 4px;
